@@ -9,7 +9,7 @@ int main(){
 	// Variaveis
 	int numero;
 	
-	// Solicitação de dados
+	// SolicitaÃ§Ã£o de dados
 	printf("Digite o numero desejado: ");
 	scanf("%i", &numero);
 	
@@ -21,8 +21,9 @@ int main(){
 	
 	
 	// Resultados
-	printf("O numero antecessor ao seu numero escolhido é: %i \n", numeroAntecessor);
-	printf("O numero sucessor ao seu numero escolhido é: %i \n", numeroSucessor);
+	printf("Seu numero escolhido foi: %i \n", numero);
+	printf("O numero antecessor ao seu numero escolhido Ã©: %i \n", numeroAntecessor);
+	printf("O numero sucessor ao seu numero escolhido Ã©: %i \n", numeroSucessor);
 	
 	return 0;
 }
