@@ -7,18 +7,18 @@ int main(){
 	setlocale(LC_ALL, "portuguese");
 	
 	// Variaveis
-	int primeiroNumero;
+	int numero;
 	
-	// Solicitação de dados
+	// SolicitaÃ§Ã£o de dados
 	printf("Digite o numero desejado: ");
-	scanf("%i", &primeiroNumero);
+	scanf("%i", &numero);
 	
 	system("cls || clear");
 	
 	if (primeiroNumero % 2 == 0) {
-		printf("O numero %i é Par.", primeiroNumero);	
+		printf("O numero %i Ã© Par.", numero);	
 	} else {
-		printf("O numero %i é Impar.", primeiroNumero);
+		printf("O numero %i Ã© Impar.", numero);
 	}
 	return 0;
 }
