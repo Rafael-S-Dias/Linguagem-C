@@ -9,7 +9,7 @@ int main() {
 	// Variaveis
 	int primeiroNumero, segundoNumero, maiorNumero, menorNumero;
 	
-	// SolicitaÁ„o
+	// Solicita√ß√£o
 	printf("Digite seu primeiro numero desejado: ");
 	scanf("%i", &primeiroNumero);
 	
@@ -18,7 +18,7 @@ int main() {
 	
 	// Calculos
 	int soma = primeiroNumero + segundoNumero;
-	float media = soma / 2;
+	float media = soma / (float) 2;
 	int produto = primeiroNumero * segundoNumero;
 	if (primeiroNumero > segundoNumero) {
 		maiorNumero = primeiroNumero;
@@ -31,13 +31,13 @@ int main() {
 	system("cls || clear");
 	
 	// Exibir Resultados
-	printf("A mÈdia dos numeros selecionados È: %.2f \n", media);
-	printf("A soma dos numeros È: %i \n", soma);
-	printf("O produto desses numeros È: %i \n", produto);
-	printf("O menor valor entre esses dois numeros È: %i \n", menorNumero);
-	printf("E o maior valor È: %i \n", maiorNumero);
+	printf("A m√©dia dos numeros selecionados √©: %.2f \n", media);
+	printf("A soma dos numeros √©: %i \n", soma);
+	printf("O produto desses numeros √©: %i \n", produto);
+	printf("O menor valor entre esses dois numeros √©: %i \n", menorNumero);
+	printf("E o maior valor √©: %i \n", maiorNumero);
 	if(primeiroNumero == segundoNumero) {
-		printf("Os valores de maior numero e menor numero s„o iguais porque os dois numeros selecionados s„o iguais!");
+		printf("Os valores de maior numero e menor numero s√£o iguais porque os dois numeros selecionados s√£o iguais!");
 	}
 	
 	return 0;
