@@ -11,7 +11,7 @@ int main() {
 	int i = 0;
 	float nota;
 
-	// Solicitação
+	// SolicitaÃ§Ã£o
 	do {
 		printf("Digite sua nota: ");
 		scanf("%f", &nota);
@@ -20,6 +20,6 @@ int main() {
 	} while (nota < 0 || nota > 10);
 	
 	// Resultados
-	printf("\nSua nota foi: %1.f", nota);
+	printf("\nSua nota foi: %.1f", nota);
 	return 0;
 }
