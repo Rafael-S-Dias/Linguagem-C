@@ -13,7 +13,7 @@ int main() {
 	float notas, soma = 0, media;
 	
 	do {
-		// Solicita??o			
+		// Solicitação			
 			do {
 				printf("Insira sua %dº nota: ", contador + 1);
 				scanf("%f", &notas);
@@ -33,7 +33,7 @@ int main() {
 		printf("\nSua media foi: %.2f\n", media);
 		printf("Tiveram %i repetições", contador);
 	
-	// Reiniciar ou Fechar c?digo
+	// Reiniciar ou Fechar código
 	printf("\n\nDeseja continuar com esse código? [s/n] \n");	
 	scanf("%s", &continuar);
 	system("cls || clear");	
