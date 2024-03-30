@@ -9,31 +9,32 @@ int main() {
 
 	// Variaveis
 	char reiniciar, continuar;
-	int contador = 1;
+	int contador;
 	float notas, soma = 0, media;
 	
 	do {
-		// Solicitação			
+		// Solicita??o			
 			do {
-				printf("Insera sua %dº nota: ", contador);
+				printf("Insira sua %dÂº nota: ", contador + 1);
 				scanf("%f", &notas);
 				
 				printf("Deseja inserir mais uma nota? [s/n]");
 				scanf("%s", &continuar);
 				
-				contador++;
+				contador++;	
+				soma += notas;
 			} while (continuar == 's');
 				
-			soma += notas;
+		
 		// Calculos
-		media = soma / contador;
+		media = soma / contador ;
 			
 		// Resultados
 		printf("\nSua media foi: %.2f\n", media);
-		printf("Tiveram %i repetições", contador);
+		printf("Tiveram %i repetiÃ§Ãµes", contador);
 	
-	// Reiniciar ou Fechar código
-	printf("\n\nDeseja continuar com esse código? [s/n] \n");	
+	// Reiniciar ou Fechar c?digo
+	printf("\n\nDeseja continuar com esse cÃ³digo? [s/n] \n");	
 	scanf("%s", &continuar);
 	system("cls || clear");	
 	
