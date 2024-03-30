@@ -10,9 +10,9 @@ int main() {
 	// Variaveis
 	int i, numeros, pares = 0, impares = 0;
 
-	// Solicitação
+	// SolicitaÃ§Ã£o
 	for (i = 1; i <= 5; i++) {
-		printf("Digite o %d° numero desejado: ", i);
+		printf("Digite o %dÂ° numero desejado: ", i);
 		scanf("%d", &numeros);
 		
 		if(numeros % 2 == 0){
@@ -25,7 +25,7 @@ int main() {
 	// Resultados
 	printf("\nA quantidades de pares : %d \n", pares);
 	printf("Sendo eles: ")
-	printf("A quantidades de ímpares : %d", impares);
+	printf("A quantidades de Ã­mpares : %d", impares);
 	
 	return 0;
 }
