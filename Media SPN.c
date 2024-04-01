@@ -51,7 +51,16 @@ int main() {
 					
 				default :
 					printf("ERRO! COMANDO INVALIDO!");
-					sleep(3);
+					sleep(2);
+					contador++;
+					printf("\nComo deseja prosseguir? \n");
+					printf("Digite [S] para inserir mais uma nota \n" );
+					printf("Digite [P] para ver quantas notas foram inseridas \n");
+					printf("Digite [N] para ver a media das notas inseridas \n");
+					printf("Resposta: ");
+					scanf("%s", &caso);
+					printf("\n");
+					caso = toupper(caso);
 			}
 					
 		} while (caso != 'N');
