@@ -10,32 +10,71 @@ int main() {
 	setlocale(LC_ALL, "portuguese");
 
 	// Variaveis
-	int notas, media, soma = 0, contador = 0;
-	char reiniciar;
-	do {	
-		while (notas >= 0 ) {
-			printf("Digite sua %iº nota: ", contador+1);
-			scanf("%i", &notas);
-			if (notas >= 0 ) {
-			contador++;
+	char reiniciar, caso;
+	int contador = 1;
+	float notas, soma = 0, media = 0;
+	
+	do {
+		// SolicitaÃ§Ã£o			
+		do {
+			printf("Insira sua %dÂº nota: ", contador);
+			scanf("%f", &notas);
+				
+			printf("\nComo deseja prosseguir? \n");
+			printf("Digite [S] para inserir mais uma nota \n" );
+			printf("Digite [P] para ver quantas notas foram inseridas \n");
+			printf("Digite [N] para ver a media das notas inseridas \n");
+			printf("Resposta: ");
+			scanf("%s", &caso);
+			printf("\n");
+			caso = toupper(caso);
+				
 			soma += notas;
-			media = soma / contador;
-			}	
-		}
-		// Exibindo Resultados
-		printf("Sua media foi: %i", media);
-		printf("\nSoma: %i", soma);
-		printf("\nContador: %i", contador);
-		
-		
-			
-	// Reiniciar ou Fechar código
-	printf("\n\nDeseja continuar com esse código? [S/N] \n");	
+				
+			switch (caso) 
+			{
+				case 'S' :
+					contador++;
+					break;
+					
+				case 'P' :
+					printf("Foram inseridas %i notas. \n", contador);
+					printf("\nComo deseja prosseguir? \n");
+					printf("Digite [s] para inserir mais uma nota \n" );
+					printf("Digite [n] para ver a media das notas inseridas \n");
+					scanf("%s", &caso);
+					caso = toupper(caso);
+					break;
+					
+				case 'N' :
+					break;
+					
+				default :
+					printf("ERRO! COMANDO INVALIDO!");
+					sleep(2);
+					contador++;
+					printf("\nComo deseja prosseguir? \n");
+					printf("Digite [S] para inserir mais uma nota \n" );
+					printf("Digite [P] para ver quantas notas foram inseridas \n");
+					printf("Digite [N] para ver a media das notas inseridas \n");
+					printf("Resposta: ");
+					scanf("%s", &caso);
+					printf("\n");
+					caso = toupper(caso);
+			}
+					
+		} while (caso != 'N');
+
+		// Exibindo Resultados 
+		media = soma / contador;
+		printf("\nSua media foi: %.2f\n", media);
+	
+	// Reiniciar ou Fechar cÃ³digo
+	printf("\n\nDeseja continuar com esse cÃ³digo? [S/N] \n");	
 	scanf("%s", &reiniciar);
 	reiniciar = toupper(reiniciar);
 	soma = 0;
-	contador = 0;
-	notas = 0;
+	contador = 1;
 	system("cls || clear");
 	
 	} while (reiniciar == 'S');	
