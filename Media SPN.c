@@ -16,50 +16,49 @@ int main() {
 	
 	do {
 		// Solicitação			
-			do {
-				printf("Insira sua %dº nota: ", contador);
-				scanf("%f", &notas);
+		do {
+			printf("Insira sua %dº nota: ", contador);
+			scanf("%f", &notas);
 				
-				printf("\nComo deseja prosseguir? \n");
-				printf("Digite [S] para inserir mais uma nota \n" );
-				printf("Digite [P] para ver quantas notas foram inseridas \n");
-				printf("Digite [N] para ver a media das notas inseridas \n");
-				printf("Resposta: ");
-				scanf("%s", &caso);
-				printf("\n");
-				caso = toupper(caso);
+			printf("\nComo deseja prosseguir? \n");
+			printf("Digite [S] para inserir mais uma nota \n" );
+			printf("Digite [P] para ver quantas notas foram inseridas \n");
+			printf("Digite [N] para ver a media das notas inseridas \n");
+			printf("Resposta: ");
+			scanf("%s", &caso);
+			printf("\n");
+			caso = toupper(caso);
 				
-				soma += notas;
+			soma += notas;
 				
-				switch (caso) 
-				{
-					case 'S' :
-						contador++;
-						break;
+			switch (caso) 
+			{
+				case 'S' :
+					contador++;
+					break;
 					
-					case 'P' :
-						printf("Foram inseridas %i notas. \n", contador);
-						printf("\nComo deseja prosseguir? \n");
-						printf("Digite [s] para inserir mais uma nota \n" );
-						printf("Digite [n] para ver a media das notas inseridas \n");
-						scanf("%s", &caso);
-						caso = toupper(caso);
-						break;
+				case 'P' :
+					printf("Foram inseridas %i notas. \n", contador);
+					printf("\nComo deseja prosseguir? \n");
+					printf("Digite [s] para inserir mais uma nota \n" );
+					printf("Digite [n] para ver a media das notas inseridas \n");
+					scanf("%s", &caso);
+					caso = toupper(caso);
+					break;
 					
-					case 'N' :
-						break;
+				case 'N' :
+					break;
 					
-					default :
-						printf("ERRO! COMANDO INVALIDO!");
-						sleep(3);
-				}
+				default :
+					printf("ERRO! COMANDO INVALIDO!");
+					sleep(3);
+			}
 					
-			} while (caso != 'N');
-			
-			media = soma / contador;
-			printf("\nContador: %i\n", contador);
-			printf("\nSoma: %.2f\n", soma);
-			printf("\nSua media foi: %.2f\n", media);
+		} while (caso != 'N');
+
+		// Exibindo Resultados 
+		media = soma / contador;
+		printf("\nSua media foi: %.2f\n", media);
 	
 	// Reiniciar ou Fechar código
 	printf("\n\nDeseja continuar com esse código? [S/N] \n");	
