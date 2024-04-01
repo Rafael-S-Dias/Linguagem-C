@@ -2,6 +2,8 @@
 # include <stdlib.h>
 # include <locale.h>
 # include <string.h>
+# include <ctype.h>
+# include <time.h>
 
 int main() {
 	// Acentos nas palavras
@@ -13,51 +15,61 @@ int main() {
 	float notas, soma = 0, media = 0;
 	
 	do {
-		// Solicitação			
+		// SolicitaÃ§Ã£o			
 			do {
-				printf("Insira sua %dº nota: ", contador);
+				printf("Insira sua %dÂº nota: ", contador);
 				scanf("%f", &notas);
 				
 				printf("\nComo deseja prosseguir? \n");
-				printf("Digite [s] para inserir mais uma nota \n" );
-				printf("Digite [p] para ver quantas notas foram inseridas \n");
-				printf("Digite [n] para ver a media das notas inseridas \n");
+				printf("Digite [S] para inserir mais uma nota \n" );
+				printf("Digite [P] para ver quantas notas foram inseridas \n");
+				printf("Digite [N] para ver a media das notas inseridas \n");
+				printf("Resposta: ");
 				scanf("%s", &caso);
+				printf("\n");
+				caso = toupper(caso);
 				
+				soma += notas;
 				
 				switch (caso) 
 				{
-					case 's' :
-						soma += notas;
+					case 'S' :
 						contador++;
-					break;
+						break;
 					
-					case 'p' :
+					case 'P' :
 						printf("Foram inseridas %i notas. \n", contador);
-					break;
+						printf("\nComo deseja prosseguir? \n");
+						printf("Digite [s] para inserir mais uma nota \n" );
+						printf("Digite [n] para ver a media das notas inseridas \n");
+						scanf("%s", &caso);
+						caso = toupper(caso);
+						break;
 					
-					case 'n' :
-						soma += notas;	
-						media = soma / contador ;
-						printf("\nSua media foi: %.2f\n", media);
-						
-					break;
+					case 'N' :
+						break;
 					
 					default :
 						printf("ERRO! COMANDO INVALIDO!");
+						sleep(3);
 				}
 					
-			} while (caso == 's');
-				
+			} while (caso != 'N');
+			
+			media = soma / contador;
+			printf("\nContador: %i\n", contador);
+			printf("\nSoma: %.2f\n", soma);
+			printf("\nSua media foi: %.2f\n", media);
 	
-	// Reiniciar ou Fechar código
-	printf("\n\nDeseja continuar com esse código? [s/n] \n");	
+	// Reiniciar ou Fechar cÃ³digo
+	printf("\n\nDeseja continuar com esse cÃ³digo? [S/N] \n");	
 	scanf("%s", &reiniciar);
+	reiniciar = toupper(reiniciar);
 	soma = 0;
 	contador = 1;
 	system("cls || clear");
 	
-	} while (reiniciar == 's');	
+	} while (reiniciar == 'S');	
 	
 	return 0;
 }
