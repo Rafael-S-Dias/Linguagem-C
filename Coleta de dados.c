@@ -71,7 +71,7 @@ int main() {
 		printf("\n\nDeseja continuar com esse código? [S/N] \n");	
 		scanf("%s", &reiniciar);
 		reiniciar = toupper(reiniciar);
-		mulheres5k = 0, contador = 0, salario = 0, soma = 0, mediaSalario = 0;
+		mulheres5k = 0, contador = 0, salario = 0, soma = 0, mediaSalario = 0, maiorIdade = 0, menorIdade = 0;
 		system("cls || clear");
 	
 	} while (reiniciar == 'S');	
