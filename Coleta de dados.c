@@ -61,8 +61,12 @@ int main() {
 		
 		// Exibindo Resultados
 		printf("A média salárial do grupo: %.2f \n", mediaSalario);
-		printf("A menor idade registrada no grupo foi de %i anos \n", menorIdade);
-		printf("A maior idade registrada no grupo foi de %i anos \n", maiorIdade);
+		if (maiorIdade == menorIdade) {
+			printf("Ambos os valores de maior e menor idade são iguais à: %i anos\n", maiorIdade);
+		} else {
+			printf("A menor idade registrada no grupo foi de %i anos \n", menorIdade);
+			printf("A maior idade registrada no grupo foi de %i anos \n", maiorIdade);
+		}
 		printf("A quantidade de mulheres com salário superior à 5.000,00 foi de: %i mulheres", mulheres5k);
 		
 		
