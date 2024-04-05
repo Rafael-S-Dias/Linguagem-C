@@ -28,10 +28,11 @@ int main() {
 			printf("Informe sua idade: ");
 			scanf("%i", &idade);
 			
-			// VerificaÁ„o de Maior e Menor Valor
+			// Verifica√ß√£o de Maior e Menor Valor
 		    if   (idade > maiorIdade) {
 		    	maiorIdade = idade;
-			} else if (idade < menorIdade && idade > 0) {
+			} 
+			if (idade < menorIdade && idade > 0) {
 				menorIdade = idade;
 			}
 			
@@ -46,7 +47,7 @@ int main() {
 			contador++;
 			soma += salario;
 			mediaSalario = soma / contador;
-			if(sexo == 'F' && salario > 5000) {
+			if(sexo == 'F' && salario >= 5000) {
 				mulheres5k++;
 			}
 			
@@ -59,17 +60,18 @@ int main() {
 		}
 		
 		// Exibindo Resultados
-		printf("A mÈdia sal·rial do grupo: %.2f \n", mediaSalario);
-		printf("A maior idade registrada no grupo foi de %i anos \n", maiorIdade);
+		printf("A m√©dia sal√°rial do grupo: %.2f \n", mediaSalario);
 		printf("A menor idade registrada no grupo foi de %i anos \n", menorIdade);
-		printf("A quantidade de mulheres com sal·rio superior ‡ 5.000,00 foi de: %i mulheres", mulheres5k);
+		printf("A maior idade registrada no grupo foi de %i anos \n", maiorIdade);
+		printf("A quantidade de mulheres com sal√°rio superior √† 5.000,00 foi de: %i mulheres", mulheres5k);
 		
 		
 		
-		// Reiniciar ou Fechar cÛdigo
-		printf("\n\nDeseja continuar com esse cÛdigo? [S/N] \n");	
+		// Reiniciar ou Fechar c√≥digo
+		printf("\n\nDeseja continuar com esse c√≥digo? [S/N] \n");	
 		scanf("%s", &reiniciar);
 		reiniciar = toupper(reiniciar);
+		mulheres5k = 0, contador = 0, salario = 0, soma = 0, mediaSalario = 0;
 		system("cls || clear");
 	
 	} while (reiniciar == 'S');	
