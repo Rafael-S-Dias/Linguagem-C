@@ -22,6 +22,21 @@ int main() {
 		printf("Digite [2] para exibir resultados \n");
 		scanf("%i", &menu);
 		system("cls || clear");
+
+		if (menu != 1 || menu != 2) {
+			while (menu != 1 ) {
+				printf("Opção Invalida!! \n");
+				sleep(2);
+				system("cls || clear");
+				
+				printf("========== MENU =========== \n");
+				printf("Como deseja prosseguir? \n");
+				printf("Digite [1] para inserir uma nova pessoa \n");
+				printf("Digite [2] para exibir resultados \n");
+				scanf("%i", &menu);
+				system("cls || clear");
+			}
+		}
 		
 		while (menu == 1) {
 			
