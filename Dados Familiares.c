@@ -11,7 +11,7 @@ int main() {
 	setlocale(LC_ALL, "portuguese");
 
 	// Variaveis
-	int menu, totalFamilias = 0, numeroFilhos, somaFilhos, mediaFilhos;
+	int menu, totalFamilias = 0, numeroFilhos, somaFilhos = 0, mediaFilhos;
 	float salario, soma, mediaSalarial, maiorSalario = INT_MIN, menorSalario = INT_MAX;
 	char reiniciar;
 	
@@ -20,7 +20,7 @@ int main() {
 		
 			printf("========== MENU =========== \n");
 			printf("Como deseja prosseguir? \n");
-			printf("Digite [1] para adicionar uma nova famÌlia \n");
+			printf("Digite [1] para adicionar uma nova fam√≠lia \n");
 			printf("Digite [2] para exibir resultados e sair\n");
 			scanf("%i", &menu);
 			system("cls || clear");
@@ -29,21 +29,26 @@ int main() {
 				switch (menu) {
 				case 1:
 					totalFamilias++;
-					printf("Quanto È a renda familiar em reais da sua famÌlia: ");
+					printf("Quanto √© a renda familiar em reais da sua fam√≠lia: ");
 					scanf("%f", &salario);			
-					soma += salario;
 					
-					printf("Quantos filhos sua famÌlia possue: ");
+					printf("Quantos filhos sua fam√≠lia possue: ");
 					scanf("%i", &numeroFilhos);
-					somaFilhos += numeroFilhos;
 					system("cls || clear");
+
 					
 					if   (salario > maiorSalario) {
 						maiorSalario = salario;
+						
 					} 
-					if (salario < menorSalario && salario > 0) {
+					if (salario < menorSalario && salario >= 1) {
 						menorSalario = salario;
-					}
+					}			
+					// Calculos
+					soma += salario;
+					somaFilhos += numeroFilhos;
+					mediaSalarial = soma / totalFamilias;
+					mediaFilhos = somaFilhos / totalFamilias;
 					break;
 					
 				case 2:
@@ -56,29 +61,26 @@ int main() {
 			} 	
 			
 			} while (menu != 2);
-			
-			// Calculos
-			mediaSalarial = salario / totalFamilias;
-			mediaFilhos = numeroFilhos / totalFamilias;
+
+
 			
 			// Exibindo Resultados
-			printf("%f", salario);
-			printf("Total de famÌlias registradas: %i \n", totalFamilias);
+			printf("Total de fam√≠lias registradas: %i \n", totalFamilias);
 			printf("Media salarial familiar: R$%.2f \n", mediaSalarial);
-			printf("Media de filhos por famÌlia: %i \n", mediaFilhos);
+			printf("Media de filhos por fam√≠lia: %i \n", mediaFilhos);
 			if (maiorSalario == menorSalario) {
-				printf("Ambos os valores de maior e menor salario s„o iguais ‡: R$%.2f \n", maiorSalario);
+				printf("Ambos os valores de maior e menor salario s√£o iguais √†: R$%.2f \n", maiorSalario);
 			} else {
-				printf("O maior renda famÌliar registrada foi: R$%.2f \n", maiorSalario);
-				printf("O menor renda famÌliar registrada foi: R$%.2f \n", menorSalario);
+				printf("O maior renda fam√≠liar registrada foi: R$%.2f \n", maiorSalario);
+				printf("O menor renda fam√≠liar registrada foi: R$%.2f \n", menorSalario);
 			}
 	
 	
-		// Reiniciar ou Fechar cÛdigo
-		printf("\n\nDeseja continuar com esse cÛdigo? [S/N] \n");	
+		// Reiniciar ou Fechar c√≥digo
+		printf("\n\nDeseja continuar com esse c√≥digo? [S/N] \n");	
 		scanf("%s", &reiniciar);
 		reiniciar = toupper(reiniciar);
-		
+		totalFamilias = 0, somaFilhos = 0, soma = 0, maiorSalario = 0, menorSalario = 0;
 		system("cls || clear");
 	
 	} while (reiniciar == 'S');	
