@@ -5,7 +5,7 @@
 # include <time.h>
 # include <limits.h> 
 
-# define TAM 3
+# define TAM 10
 
 int main() {
 	setlocale(LC_ALL, "portuguese");
@@ -17,7 +17,7 @@ int main() {
 	
 	do {
 		for(contador = 0; contador < TAM; contador++) {
-			printf("Digite seu %i° numero: ", contador+1);
+			printf("Digite seu %iÂ° numero: ", contador+1);
 			scanf("%f", &numeros[contador]);
 			
 			if (numeros[contador] >= 0) {
@@ -30,15 +30,15 @@ int main() {
 		
 		// Resultados
 		for(contador = 0; contador < TAM; contador++) {
-			printf("%iº Numero: %.2f \n", contador+1, numeros[contador]);
+			printf("%iÂº Numero: %.2f \n", contador+1, numeros[contador]);
 		}
 		printf("A soma dos numeros positivos foi: %.2f \n", soma);
 		printf("A quantidade de numeros negativos digitados foi: %i \n", quantidadeNegativos);
 		
 		
 		
-		// Reiniciar ou Fechar código
-		printf("\n\nDeseja continuar com esse código? [S/N] \n");	
+		// Reiniciar ou Fechar cÃ³digo
+		printf("\n\nDeseja continuar com esse cÃ³digo? [S/N] \n");	
 		scanf("%s", &reiniciar);
 		reiniciar = toupper(reiniciar);
 		soma = 0, quantidadeNegativos = 0;
