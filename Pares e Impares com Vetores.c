@@ -6,7 +6,7 @@
 # include <time.h>
 # include <limits.h> 
 
-# define TAM 2
+# define TAM 6
 
 int main() {
 	setlocale(LC_ALL, "portuguese");
@@ -17,7 +17,7 @@ int main() {
 	
 	do {
 		for (contador = 0; contador < TAM; contador++) {
-			printf("Informe o %iº numero desejado: ", contador + 1);
+			printf("Informe o %iÂº numero desejado: ", contador + 1);
 			scanf("%i", &numeros[contador]);
 			
 			if (numeros[contador] % 2 == 0) {
@@ -32,13 +32,13 @@ int main() {
 		// Resultados
 		printf("Seus numeros foram: \n");
 		for (contador = 0; contador < TAM; contador++) {
-			printf("Seu %iº numero foi: %i \n", contador + 1, numeros[contador]);	
+			printf("Seu %iÂº numero foi: %i \n", contador + 1, numeros[contador]);	
 		}
 		printf("A quantidade de numeros pares foi: %i\n", pares);
 		printf("A quantidade de numeros impares foi: %i", impares);
 	
-		// Reiniciar ou Fechar código
-		printf("\n\nDeseja continuar com esse código? [S/N] \n");	
+		// Reiniciar ou Fechar cÃ³digo
+		printf("\n\nDeseja continuar com esse cÃ³digo? [S/N] \n");	
 		scanf("%s", &reiniciar);
 		reiniciar = toupper(reiniciar);
 		pares = 0, impares = 0;
