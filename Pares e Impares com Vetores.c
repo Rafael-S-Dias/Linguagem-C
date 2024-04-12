@@ -12,7 +12,7 @@ int main() {
 	setlocale(LC_ALL, "portuguese");
 	
 	// Variaveis
-	int numeros[TAM], contador, pares = 0, impares;
+	int numeros[TAM], contador, pares = 0, impares = 0;
 	char reiniciar;
 	
 	do {
