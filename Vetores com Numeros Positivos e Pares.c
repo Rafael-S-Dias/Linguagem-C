@@ -5,7 +5,7 @@
 # include <time.h>
 # include <limits.h> 
 
-# define TAM 3
+# define TAM 6
 
 int main() {
 	setlocale(LC_ALL, "portuguese");
@@ -16,7 +16,7 @@ int main() {
 	do {
 		for(contador = 0; contador < TAM; contador++) {
 			do {
-			printf("Digite seu %i° numero: ", contador+1);
+			printf("Digite seu %iÂ° numero: ", contador+1);
 			scanf("%i", &valores[contador]);
 			if (valores[contador] < 0 || valores[contador] % 2 != 0) {
 				printf("Valor Invalido! Tente novamente! \n");
@@ -30,12 +30,12 @@ int main() {
 		// Resultados
 		printf("Numeros selecionados: \n");
 		for(contador = TAM; contador > 0; contador--) {
-			printf("%iº Valor: %i \n", contador, valores[contador-1]);
+			printf("%iÂº Valor: %i \n", contador, valores[contador-1]);
 		}
 		
 		
-		// Reiniciar ou Fechar código
-		printf("\n\nDeseja continuar com esse código? [S/N] \n");	
+		// Reiniciar ou Fechar cÃ³digo
+		printf("\n\nDeseja continuar com esse cÃ³digo? [S/N] \n");	
 		scanf("%s", &reiniciar);
 		reiniciar = toupper(reiniciar);
 		system("cls || clear");
