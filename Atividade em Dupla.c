@@ -15,12 +15,12 @@ int main() {
 	char disciplina[TAM][200];
 	
 	for (i=0; i < TAM; i++) {
-		printf("Digite o nome da %iº disciplina: ", i+1);
+		printf("Digite o nome da %iÂº disciplina: ", i+1);
 		scanf("%s", &disciplina[i]);
 		
 		for (j=0; j < TAM; j++) {
 		  do {
-			printf("Digite sua %iº nota: ", j+1);
+			printf("Digite sua %iÂº nota: ", j+1);
 			scanf("%f", &notas[i][j]);
 			
 		} while (notas[i][j] < 0 || notas[i][j] > 10 );
@@ -39,13 +39,13 @@ int main() {
 	// Resultados 
 	
 	for (i=0; i < TAM; i++) {
-		printf("Nome da %dª disciplina: %s \n", i+1,disciplina[i]);
+		printf("Nome da %dÂª disciplina: %s \n", i+1,disciplina[i]);
 
 		for (j=0; j < TAM; j++) { 
-		printf("%iª nota: %.2f peso %.1f \n", j+1, notas[i][j], peso[j]);
+		printf("%iÂª nota: %.2f peso %.1f \n", j+1, notas[i][j], peso[j]);
 		//printf("Soma: %.2f \n", soma[i]);
 		}
-	printf("Média pondrada: %.2f\n\n", media[i]);
+	printf("MÃ©dia ponderada: %.2f\n\n", media[i]);
 		}
 	
 		return 0;
