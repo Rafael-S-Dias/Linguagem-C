@@ -22,7 +22,7 @@ for (contador = 0; contador < TAM1; contador++) {
 	
 	for (contador2 = 0; contador2 < TAM2; contador2++){
 		printf("Digite a %dº nota do aluno/aluna %s: ", contador2+1, alunos[contador]);
-		scanf("%2f", &notas[contador][contador2]);
+		scanf("%f", &notas[contador][contador2]);
 		
 		soma[contador] += notas[contador][contador2];
 		media[contador] = soma[contador] / TAM2;
